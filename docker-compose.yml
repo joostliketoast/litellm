@@ -48,10 +48,10 @@ services:
     image: prom/prometheus
     volumes:
       - litellm-prometheus:/prometheus
-      - type: bind
-        source: ./prometheus-config.yml
-        target: /etc/prometheus/prometheus.yml
-        read_only: true # Good practice for config files
+      # - type: bind
+      #   source: ./prometheus-config.yml
+      #   target: /etc/prometheus/prometheus.yml
+      #   read_only: true # Good practice for config files
     ports:
       - "9090:9090"
     command:
