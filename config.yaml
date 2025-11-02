@@ -1,0 +1,49 @@
+model_list:
+  - model_name: azure-o1-mini
+    litellm_params:
+      model: azure_ai/o1-mini
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+      api_version: "2024-08-01-preview"
+  - model_name: azure-o3-mini
+    litellm_params:
+      model: azure_ai/o3-mini
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+      api_version: "2024-08-01-preview"
+  - model_name: azure-gpt-4.1
+    litellm_params:
+      model: azure_ai/gpt-4.1
+      api_base: os.environ/AZURE_API_BASE
+      api_key: os.environ/AZURE_API_KEY
+      api_version: "2024-08-01-preview"
+  - model_name: gemini-2.5-pro
+    litellm_params:
+      model: gemini/gemini-2.5-pro
+      api_key: os.environ/GEMINI_API_KEY
+  - model_name: gemini-2.5-flash
+    litellm_params:
+      model: gemini/gemini-2.5-flash
+      api_key: os.environ/GEMINI_API_KEY
+  - model_name: imagen-4-ultra
+    litellm_params:
+      model: gemini/imagen-4.0-ultra-generate-preview-06-06
+      api_key: os.environ/GEMINI_API_KEY
+  - model_name: copilot/claude-sonnet-4.5
+    litellm_params:
+      model: github_copilot/claude-sonnet-4.5
+      extra_headers: {"Editor-Version": "Neovim/0.9.0", "Copilot-Integration-Id": "vscode-chat"}
+  - model_name: copilot/gemini-2.5-pro
+    litellm_params:
+      model: github_copilot/gemini-2.5-pro
+      extra_headers: {"Editor-Version": "Neovim/0.9.0", "Copilot-Integration-Id": "vscode-chat"}
+  - model_name: copilot/gpt-5
+    litellm_params:
+      model: github_copilot/gpt-5
+      extra_headers: {"Editor-Version": "Neovim/0.9.0", "Copilot-Integration-Id": "vscode-chat"}
+  - model_name: copilot/gpt-5-codex
+    litellm_params:
+      model: github_copilot/gpt-5-codex
+      extra_headers: {"Editor-Version": "Neovim/0.9.0", "Copilot-Integration-Id": "vscode-chat"}
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
