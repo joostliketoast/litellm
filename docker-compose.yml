@@ -6,7 +6,7 @@ services:
         target: runtime
     image: ghcr.io/berriai/litellm:main-stable
     volumes:
-      - ./litellm_config.yaml:/app/config.yaml
+      - litellm_config.yaml:/app/config.yaml
     command:
       - "--config=/app/config.yaml"
     ports:
@@ -48,10 +48,7 @@ services:
     image: prom/prometheus
     volumes:
       - litellm-prometheus:/prometheus
-      # - type: bind
-      #   source: ./prometheus-config.yml
-      #   target: /etc/prometheus/prometheus.yml
-      #   read_only: true # Good practice for config files
+      - prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
     command:
