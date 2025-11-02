@@ -49,7 +49,7 @@ services:
     volumes:
       - litellm-prometheus:/prometheus
       - type: bind
-        source: ./prometheus.yml
+        source: ./prometheus-config.yml
         target: /etc/prometheus/prometheus.yml
         read_only: true # Good practice for config files
     ports:
