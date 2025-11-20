@@ -47,7 +47,7 @@ model_list:
         }
   - model_name: copilot/gemini-3-pro
     litellm_params:
-      model: github_copilot/gemini-3-pro
+      model: github_copilot/gemini-3-pro-preview
       extra_headers:
         {
           "Editor-Version": "Neovim/0.9.0",
